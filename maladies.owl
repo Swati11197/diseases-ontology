@@ -1,0 +1,2005 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aPrescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aPrescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aSymptome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aSymptome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladie"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <rdfs:comment xml:lang="en">Symptom commonly associated with a desease</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Symptome communément associé à une maladie</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aTraitement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aTraitement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aUnite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aUnite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#unite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#dureeTraitement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#dureeTraitement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <rdfs:comment xml:lang="fr">La durée pendant laquelle un patient doit suivre un traitement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The period of time a patient has to undergo treatment</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequenceTraitement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequenceTraitement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <rdfs:comment xml:lang="fr">La fréquence à laquelle un patient doit prendre un traitement.
+Par exemple 2 fois par jour pour du Paracetamol ou 1 fois par mois pour des séances d&apos;accupuncture.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The frequency a patient has to take a treatment.
+For exemple 2 times a day for Paracetamol, or once a month for some accupuncture sessions.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdfs:comment xml:lang="en">Organ affected by a desease.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Organe touché par une maladie, si il y a lieu.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#quantiteParPrise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#quantiteParPrise">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#medicament"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+        <rdfs:comment xml:lang="fr">La quantité (masse) que doit ingérer le patient par prise du médicament.
+Par exemple le Paracétamol peut être pris en comprimés de 500mg ou 1g.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The quantity (weight) of a drug that the patient have to take at one time.
+For example the Paracetamol can be taken by pills of 500mg or 1g</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicaleAssociee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicaleAssociee">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:comment xml:lang="fr">Specialité médicale associée à un état de santé.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cimId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cimId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Corresponding id in the international classification of deseases (ICD).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Identifiant correspondant dans la Classification Internationale des Maladies (CIM).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#valeurNumerique -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#valeurNumerique">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#amoxilicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#amoxilicine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#medicament"/>
+        <rdfs:label xml:lang="en">amoxilicin</rdfs:label>
+        <rdfs:label xml:lang="fr">amoxilicine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cyclosporine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cyclosporine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#medicament"/>
+        <rdfs:label xml:lang="en">cyclosporine</rdfs:label>
+        <rdfs:label xml:lang="fr">cyclosporine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aUnite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cimId"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class that groups the entitys that characterize the health of a patient, i.e the deseases and the symptoms. A health state must have an id in the International Classification of Deseases.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Classe qui regroupe les entités qui caractérisent l&apos;état de santé d&apos;un patient, c-à-d les maladies et les symptômes. Un état de santé possède forcément un identifiant dans la Classification Internationale des Maladies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aUnite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#valeurNumerique"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectionBacterienne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectionBacterienne">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInfectieuse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectionVirale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectionVirale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInfectieuse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicaleAssociee"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <rdfs:comment xml:lang="en">Class that group the differents deseases, they can be associated with symptoms, prescriptions and medical specialities.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Classe qui regroupe les différentes maladies, auxquelles peuvent être associés des symptômes, des prescriptions et des spécialités médicales.</rdfs:comment>
+        <rdfs:label xml:lang="en">desease</rdfs:label>
+        <rdfs:label xml:lang="fr">maladie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieAbdominale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieAbdominale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDeLaTeteEtDuCou -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDeLaTeteEtDuCou">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDorsale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDorsale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDorsal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDuBassin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDuBassin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInfectieuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInfectieuse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParMecanisme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInflamatoire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInflamatoire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParMecanisme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieNonLocalisee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieNonLocalisee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeNonLocalise"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladie"/>
+        <rdfs:comment xml:lang="fr">Sous-classe de maladie, qui classifie les maladies en fonction de la partie du corps à laquelle elles sont associées.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Subclass of desease that classifies deseases depending on which part of the body they are related to.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParMecanisme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParMecanisme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladie"/>
+        <rdfs:comment xml:lang="fr">Sous-classe de maladie qui classifie les maladie en fonction de leur mécanisme d&apos;action.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Subclass of desease that classifies deseases depending on their mecanism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieThoracique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieThoracique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParLocalisation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#localisation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieTumorale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieTumorale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieParMecanisme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aUnite"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#grandeur"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aUnite"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#medicament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#medicament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#quantiteParPrise"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitementNonMedicamenteu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe">
+        <rdfs:comment xml:lang="en">Class that classifies the organs depending on their location in the body</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Classe qui classifie les différents organes en fonction de leur emplacement dans le corps</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDorsal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDorsal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeNonLocalise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeNonLocalise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#medicament"/>
+        <rdfs:label xml:lang="en">paracetamol</rdfs:label>
+        <rdfs:label xml:lang="fr">paracetamol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#aTraitement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Une prescription représente le fait qu&apos;un traitement est souvent accompagné d&apos;une information sur la durée du traitement et/ou la fréquence de prise du traitement. Elle est utilisée par exemple pour représenter la phrase : paracetamol 500mg, 2 fois par jour pendant une semaine.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to express the fact that a treatment is commonly attched with the duration of the treatment and/or the frequency at which the treatment has to be taken. For exemple a prescription will be used to express the sentence :  paracetamol 500mg, twice a day during a week.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale">
+        <rdfs:comment xml:lang="fr">Différentes spécialités du corps médicale</rdfs:comment>
+        <rdfs:comment xml:lang="en">Medical specialities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#etatDeSante"/>
+        <rdfs:comment xml:lang="en">Class that group symptoms that can be associated with a desease. Their ICD id starts with the letter &quot;R&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Classe qui regroupe les différents symptômes qui peuvent être associés à une maladie. Leur identifiant CIM commence par la lettre &quot;R&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">symptom</rdfs:label>
+        <rdfs:label xml:lang="fr">symptôme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitementNonMedicamenteu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitementNonMedicamenteu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#unite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#unite"/>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#unite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#unite"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#amoxilicine_2g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#amoxilicine_2g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#amoxilicine"/>
+        <quantiteParPrise rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_2_g"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#anesth-rea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#anesth-rea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">anesthesiology</rdfs:label>
+        <rdfs:label xml:lang="fr">anesthésie-réanimation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+        <rdfs:label xml:lang="fr">année</rdfs:label>
+        <rdfs:label xml:lang="en">year</rdfs:label>
+        <skos:prefLabel xml:lang="fr">an</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">yr</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#anorexie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#anorexie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R63.0</cimId>
+        <rdfs:label xml:lang="en">anorexia</rdfs:label>
+        <rdfs:label xml:lang="fr">anorexie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#appareil_genital_feminin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#appareil_genital_feminin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin"/>
+        <rdfs:label xml:lang="fr">appareil génital féminin</rdfs:label>
+        <rdfs:label xml:lang="en">female genitalia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#appareil_genital_masculin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#appareil_genital_masculin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin"/>
+        <rdfs:label xml:lang="fr">appareil génital masculin</rdfs:label>
+        <rdfs:label xml:lang="en">male genitalia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#appendicite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#appendicite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieAbdominale"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieInflamatoire"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chirurgie"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_paracetamol_1"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#anorexie"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_abdominal"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vomissement"/>
+        <localisation rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#colon"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#chirurgie"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gastro"/>
+        <cimId>K35-K37</cimId>
+        <rdfs:label xml:lang="fr">appendicite</rdfs:label>
+        <rdfs:label xml:lang="en">appendicitis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancer_de_la_vessie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancer_de_la_vessie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDuBassin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieTumorale"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chimiotherapie"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chirurgie"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_radiotherapie"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#hematurie"/>
+        <localisation rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vessie"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancero"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uro-nephro"/>
+        <cimId>C67</cimId>
+        <rdfs:label xml:lang="en">bladder cancer</rdfs:label>
+        <rdfs:label xml:lang="fr">cancer de la vessie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancer_du_poumon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancer_du_poumon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieThoracique"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieTumorale"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chimiotherapie"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chirurgie"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_radiotherapie"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#anorexie"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_thoracique"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#hemoptysie"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#sibilance"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#toux"/>
+        <localisation rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#poumons"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancero"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pneumo-allergo"/>
+        <cimId>C33-C34</cimId>
+        <rdfs:label xml:lang="fr">cancer du poumon</rdfs:label>
+        <rdfs:label xml:lang="en">lung cancer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cancero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">cancer-care</rdfs:label>
+        <rdfs:label xml:lang="fr">cancérologie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cardio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cardio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">cardiologie</rdfs:label>
+        <rdfs:label xml:lang="en">cardiology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cephalee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cephalee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R51</cimId>
+        <rdfs:label xml:lang="en">cephalalgia</rdfs:label>
+        <rdfs:label xml:lang="fr">céphalée</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cerveau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cerveau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">brain</rdfs:label>
+        <rdfs:label xml:lang="fr">cerveau</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#chimiotherapie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#chimiotherapie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitementNonMedicamenteu"/>
+        <rdfs:label xml:lang="en">Chemotherapy</rdfs:label>
+        <rdfs:label xml:lang="fr">chimiothérapie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#chirurgie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#chirurgie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">chirurgie</rdfs:label>
+        <rdfs:label xml:lang="en">surgery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#coeur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#coeur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        <rdfs:label xml:lang="fr">coeur</rdfs:label>
+        <rdfs:label xml:lang="en">heart</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#colon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#colon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="en">colon</rdfs:label>
+        <rdfs:label xml:lang="fr">côlon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cyclosporine_200mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cyclosporine_200mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cyclosporine"/>
+        <quantiteParPrise rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_200_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#dents -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#dents">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdfs:label xml:lang="fr">dents</rdfs:label>
+        <rdfs:label xml:lang="en">teeth</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#dermato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#dermato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">dermatologie</rdfs:label>
+        <rdfs:label xml:lang="en">dermatology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#diaphragme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#diaphragme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        <rdfs:label xml:lang="en">diaphragm</rdfs:label>
+        <rdfs:label xml:lang="fr">diaphragme</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_abdominal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_abdominal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R10</cimId>
+        <rdfs:label xml:lang="en">abdominal pain</rdfs:label>
+        <rdfs:label xml:lang="fr">douleur abdominal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_thoracique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_thoracique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R07</cimId>
+        <rdfs:label xml:lang="en">chest pain</rdfs:label>
+        <rdfs:label xml:lang="fr">douleur thoracique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_an -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_an">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_jour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_jour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_semaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_semaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_an -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_an">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_jour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_jour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_semaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_semaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_3_jours -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_3_jours">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_3_mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_3_mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_3_semaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_3_semaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_6_mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_6_mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#endocrino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#endocrino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">endocrinologie</rdfs:label>
+        <rdfs:label xml:lang="en">endocrinology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#eruption_cutanee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#eruption_cutanee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R21</cimId>
+        <rdfs:comment xml:lang="en">skin rash</rdfs:comment>
+        <rdfs:label xml:lang="fr">éruption cutanée</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#estomac -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#estomac">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="fr">estomac</rdfs:label>
+        <rdfs:label xml:lang="en">stomach</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#fievre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#fievre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R50</cimId>
+        <rdfs:comment xml:lang="en">Body temperature greater tha 38°C</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Température corporelle supérieure ou égale à 38°C</rdfs:comment>
+        <rdfs:label xml:lang="en">fever</rdfs:label>
+        <rdfs:label xml:lang="fr">fièvre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#foie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#foie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="fr">foie</rdfs:label>
+        <rdfs:label xml:lang="en">liver</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_an -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_an">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_jour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_jour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_semaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_semaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_an -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_an">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_jour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_jour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_semaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_semaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_3_foisPar_an -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_3_foisPar_an">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#année"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_3_foisPar_jour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_3_foisPar_jour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gastro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gastro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">gastrologie</rdfs:label>
+        <rdfs:label xml:lang="en">gastrology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#genetique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#genetique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">genetic</rdfs:label>
+        <rdfs:label xml:lang="fr">génétique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glande_thyroïde -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glande_thyroïde">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="fr">glande thyroïde</rdfs:label>
+        <rdfs:label xml:lang="en">thyroid gland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_mammaires -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_mammaires">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        <rdfs:label xml:lang="fr">glandes mammaires</rdfs:label>
+        <rdfs:label xml:lang="en">mammary glands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_parathyroïdes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_parathyroïdes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="fr">glandes parathyroïdes</rdfs:label>
+        <rdfs:label xml:lang="en">parathyroid glands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_salivaires -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_salivaires">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="fr">glandes salivaires</rdfs:label>
+        <rdfs:label xml:lang="en">salivary glands</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_surrenales -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#glandes_surrenales">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="en">adrenal glands</rdfs:label>
+        <rdfs:label xml:lang="fr">glandes surrénales</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gramme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gramme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse"/>
+        <rdfs:label xml:lang="en">gram</rdfs:label>
+        <rdfs:label xml:lang="fr">gramme</rdfs:label>
+        <skos:prefLabel>g</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gyneco-obst -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gyneco-obst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">gynecology-obstetric</rdfs:label>
+        <rdfs:label xml:lang="fr">gynécologie-obstétrique</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#hematurie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#hematurie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R31</cimId>
+        <rdfs:comment xml:lang="en">blood in the urine</rdfs:comment>
+        <rdfs:comment xml:lang="fr">présence de sang dans l&apos;urine</rdfs:comment>
+        <rdfs:label xml:lang="en">hematuria</rdfs:label>
+        <rdfs:label xml:lang="fr">hématurie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#hemoptysie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#hemoptysie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R04.2</cimId>
+        <rdfs:comment xml:lang="en">Coughing up of blood</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Rejet de sang provenant des voies respiratoires</rdfs:comment>
+        <rdfs:label xml:lang="en">hemoptysis</rdfs:label>
+        <rdfs:label xml:lang="fr">hémoptysie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#heure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#heure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+        <rdfs:label xml:lang="fr">heure</rdfs:label>
+        <rdfs:label xml:lang="en">hour</rdfs:label>
+        <skos:prefLabel xml:lang="en">h</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">h</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#immuno-hemato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#immuno-hemato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">immunologie-hématologie</rdfs:label>
+        <rdfs:label xml:lang="en">immunology-hematology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectiologie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectiologie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">infectious diseases care</rdfs:label>
+        <rdfs:label xml:lang="fr">inféctiologie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#intestin_grele -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#intestin_grele">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdfs:label xml:lang="fr">intestin grêle</rdfs:label>
+        <rdfs:label xml:lang="en">small intestine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#jour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+        <rdfs:label xml:lang="en">day</rdfs:label>
+        <rdfs:label xml:lang="fr">jour</rdfs:label>
+        <skos:prefLabel xml:lang="en">d</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">j</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#kilogramme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#kilogramme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse"/>
+        <rdfs:label xml:lang="en">kilogram</rdfs:label>
+        <rdfs:label xml:lang="fr">kilogramme</rdfs:label>
+        <skos:prefLabel>kg</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#langue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#langue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="fr">langue</rdfs:label>
+        <rdfs:label xml:lang="en">tongue</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#larynx -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#larynx">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">larynx</rdfs:label>
+        <rdfs:label xml:lang="fr">larynx</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_1_g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_1_g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gramme"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_200_mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_200_mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#milligramme"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_2_g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_2_g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#gramme"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_500_mg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_500_mg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+        <aUnite rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#milligramme"/>
+        <valeurNumerique rdf:datatype="http://www.w3.org/2001/XMLSchema#float">500.0</valeurNumerique>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#meninges -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#meninges">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">meninges</rdfs:label>
+        <rdfs:label xml:lang="fr">méninges</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#milligramme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#milligramme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeMasse"/>
+        <rdfs:label xml:lang="en">milligram</rdfs:label>
+        <rdfs:label xml:lang="fr">milligramme</rdfs:label>
+        <skos:prefLabel>mg</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#moelle_epiniere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#moelle_epiniere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDorsal"/>
+        <rdfs:label xml:lang="fr">moelle épinière</rdfs:label>
+        <rdfs:label xml:lang="en">spinal cord</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#mois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+        <rdfs:label xml:lang="fr">mois</rdfs:label>
+        <rdfs:label xml:lang="en">month</rdfs:label>
+        <skos:prefLabel xml:lang="fr">m</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">mth</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#myelodysplasie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#myelodysplasie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDorsale"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_cyclosporine_1"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#souffle_court"/>
+        <localisation rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#moelle_epiniere"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#immuno-hemato"/>
+        <cimId>D46</cimId>
+        <rdfs:label xml:lang="en">Myelodysplastic syndrome</rdfs:label>
+        <rdfs:label xml:lang="fr">myélodysplasie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#neuro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#neuro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">neurologie</rdfs:label>
+        <rdfs:label xml:lang="en">neurology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oeil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oeil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">eye</rdfs:label>
+        <rdfs:label xml:lang="fr">oeil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oesophage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oesophage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        <rdfs:label xml:lang="en">esophagus</rdfs:label>
+        <rdfs:label xml:lang="fr">oesophage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#operation_chirurgicale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#operation_chirurgicale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitementNonMedicamenteu"/>
+        <rdfs:label xml:lang="fr">operation chirurgicale</rdfs:label>
+        <rdfs:label xml:lang="en">surgery</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#ophtalmo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#ophtalmo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">ophtalmologie</rdfs:label>
+        <rdfs:label xml:lang="en">ophthalmology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oreilles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oreilles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">ears</rdfs:label>
+        <rdfs:label xml:lang="fr">oreilles</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oreillons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oreillons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectionVirale"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieDeLaTeteEtDuCou"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_paracetamol_2"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cephalee"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#fievre"/>
+        <localisation rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#oreilles"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectiologie"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#orl-stomato"/>
+        <cimId>B26</cimId>
+        <rdfs:label xml:lang="en">mumps</rdfs:label>
+        <rdfs:label xml:lang="fr">oreillons</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#orl-stomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#orl-stomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">otolaryngology-stomatology</rdfs:label>
+        <rdfs:label xml:lang="fr">otorhinolaryngologie-stomatologie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pancreas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pancreas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="en">pancreas</rdfs:label>
+        <rdfs:label xml:lang="fr">pancréas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol_1000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol_1000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol"/>
+        <quantiteParPrise rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_1_g"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol_500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol_500">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol"/>
+        <quantiteParPrise rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse_500_mg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#peau -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#peau">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeNonLocalise"/>
+        <rdfs:label xml:lang="fr">peau</rdfs:label>
+        <rdfs:label xml:lang="en">skin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#peritoine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#peritoine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="en">peritoneum</rdfs:label>
+        <rdfs:label xml:lang="fr">péritoine</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pharynx -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pharynx">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">pharynx</rdfs:label>
+        <rdfs:label xml:lang="fr">pharynx</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pneumo-allergo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#pneumo-allergo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">pneumologie-allergologie</rdfs:label>
+        <rdfs:label xml:lang="en">pneumology-allergology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#poumons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#poumons">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        <rdfs:label xml:lang="en">lungs</rdfs:label>
+        <rdfs:label xml:lang="fr">poumons</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_amoxilicine_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_amoxilicine_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#amoxilicine_2g"/>
+        <dureeTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_semaine"/>
+        <frequenceTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_jour"/>
+        <rdfs:comment xml:lang="en">amoxilicin 2g, twice a day during a week</rdfs:comment>
+        <rdfs:comment xml:lang="fr">amoxilicine 2g, 2 fois par jour pendant une semaine</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chimiotherapie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chimiotherapie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#chimiotherapie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chirurgie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_chirurgie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#operation_chirurgicale"/>
+        <rdfs:comment xml:lang="fr">intervention chirurgicale requise</rdfs:comment>
+        <rdfs:comment xml:lang="en">surgery required</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_cyclosporine_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_cyclosporine_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#cyclosporine_200mg"/>
+        <dureeTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_an"/>
+        <frequenceTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_1_foisPar_jour"/>
+        <rdfs:comment xml:lang="fr">cyclopsorine 200mg, 1 fois par jour pendant un an</rdfs:comment>
+        <rdfs:comment xml:lang="en">cyclosporine 200mg, once a day during a year</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_paracetamol_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_paracetamol_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol_1000"/>
+        <dureeTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_2_semaine"/>
+        <frequenceTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_2_foisPar_jour"/>
+        <rdfs:comment xml:lang="fr">paracetamol 1000mg, 2 fois par jour pendant 2 semaines</rdfs:comment>
+        <rdfs:comment xml:lang="en">paracetamol 1000mg, twice a day during 2 weeks</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_paracetamol_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_paracetamol_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#paracetamol_500"/>
+        <dureeTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree_1_semaine"/>
+        <frequenceTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#freq_3_foisPar_jour"/>
+        <rdfs:comment xml:lang="fr">paracetamol 500mg, 3 fois par jour pendant 1 semaine</rdfs:comment>
+        <rdfs:comment xml:lang="en">paracetamol 500mg, 3 times a day during a week</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_radiotherapie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_radiotherapie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription"/>
+        <aTraitement rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#radiotherapie"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#psychiatrie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#psychiatrie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">psychiatrie</rdfs:label>
+        <rdfs:label xml:lang="en">psychiatry</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#radiotherapie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#radiotherapie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traitementNonMedicamenteu"/>
+        <rdfs:label xml:lang="en">radiation therapy</rdfs:label>
+        <rdfs:label xml:lang="fr">radiothérapie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#rate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#rate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="fr">rate</rdfs:label>
+        <rdfs:label xml:lang="en">spleen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#rectum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#rectum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin"/>
+        <rdfs:label xml:lang="en">rectum</rdfs:label>
+        <rdfs:label xml:lang="fr">rectum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#reins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#reins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="en">kidneys</rdfs:label>
+        <rdfs:label xml:lang="fr">reins</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#rhumato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#rhumato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="en">rheumatology</rdfs:label>
+        <rdfs:label xml:lang="fr">rhumatologie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#scalp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#scalp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+        <rdfs:label xml:lang="en">scalp</rdfs:label>
+        <rdfs:label xml:lang="fr">scalp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#scarlatine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#scarlatine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectionBacterienne"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#maladieNonLocalisee"/>
+        <aPrescription rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#prescription_amoxilicine_1"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#douleur_abdominal"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#eruption_cutanee"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#fievre"/>
+        <aSymptome rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vomissement"/>
+        <localisation rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#peau"/>
+        <specialiteMedicaleAssociee rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#infectiologie"/>
+        <cimId>A38</cimId>
+        <rdfs:label xml:lang="fr">scarlatine</rdfs:label>
+        <rdfs:label xml:lang="en">scarlet fever</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#semaine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uniteDeTemps"/>
+        <rdfs:label xml:lang="fr">semaine</rdfs:label>
+        <rdfs:label xml:lang="en">week</rdfs:label>
+        <skos:prefLabel xml:lang="fr">sem</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">wk</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#sibilance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#sibilance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R06.2</cimId>
+        <rdfs:comment xml:lang="fr">sifflement respiratoire</rdfs:comment>
+        <rdfs:comment xml:lang="en">wheeze while breathing</rdfs:comment>
+        <rdfs:label xml:lang="fr">sibilance</rdfs:label>
+        <rdfs:label xml:lang="en">sibilant rhonchi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#souffle_court -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#souffle_court">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R06.0</cimId>
+        <rdfs:label xml:lang="en">short breath</rdfs:label>
+        <rdfs:label xml:lang="fr">souffle court</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#squelette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#squelette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeNonLocalise"/>
+        <rdfs:label xml:lang="en">skeleton</rdfs:label>
+        <rdfs:label xml:lang="fr">squelette</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#thymus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#thymus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        <rdfs:label xml:lang="en">thymus</rdfs:label>
+        <rdfs:label xml:lang="fr">thymus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#toux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#toux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R05</cimId>
+        <rdfs:label xml:lang="en">cough</rdfs:label>
+        <rdfs:label xml:lang="fr">toux</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traumato-ortho -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#traumato-ortho">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">traumatologie-orthopédie</rdfs:label>
+        <rdfs:label xml:lang="en">traumatology-orthopedy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uro-nephro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#uro-nephro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#specialiteMedicale"/>
+        <rdfs:label xml:lang="fr">urologie-néphrologie</rdfs:label>
+        <rdfs:label xml:lang="en">urology-nephrology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vertebres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vertebres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDorsal"/>
+        <rdfs:label xml:lang="en">vertebrae</rdfs:label>
+        <rdfs:label xml:lang="fr">vertèbres</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vesicule_biliaire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vesicule_biliaire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+        <rdfs:label xml:lang="en">gall blader</rdfs:label>
+        <rdfs:label xml:lang="fr">vésicule biliaire</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vessie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vessie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organe"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin"/>
+        <rdfs:label xml:lang="en">bladder</rdfs:label>
+        <rdfs:label xml:lang="fr">vessie</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vomissement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#vomissement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#symptome"/>
+        <cimId>R11</cimId>
+        <rdfs:label xml:lang="fr">vomissement</rdfs:label>
+        <rdfs:label xml:lang="en">vomit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#duree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#frequence"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#masse"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeAbdominal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDeLaTeteEtDuCou"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDorsal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeDuBassin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeNonLocalise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/antoinebarbez/ontologies/2017/10/untitled-ontology-8#organeThoracique"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
